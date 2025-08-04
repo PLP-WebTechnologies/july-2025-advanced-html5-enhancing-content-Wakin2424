@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+<!-- A student registration form  -->
+    <header>
+        <h1 align="center">Student Registration Form</h1>
+    </header>
+
+    <main>
+        <!-- Section 1: Lists and Table -->
+        <section>
+            <!-- highlighting course features  -->
+            <h2>Course Features</h2>
+            <ul>
+                <li>Learn HTML5 semantics</li>
+                <li>Build accessible forms</li>
+                <li>Use multimedia effectively</li>
+            </ul>
+
+            <h2>Class Schedule</h2>
+            <ol>
+                <!-- weekly class schedule  -->
+                <li>Week 1: HTML Basics</li>
+                <li>Week 2: Forms & Validation</li>
+                <li>Week 3: Accessibility & SEO</li>
+            </ol>
+
+            <h2>Course Details</h2>
+            <!-- course details  -->
+            <table border="2" width="800">
+                <caption>Course Information</caption>
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Duration</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>4 hours</td>
+                        <td>Mr. Wakin</td>
+                    </tr>
+                    <tr>
+                        <td>Forms</td>
+                        <td>3 hours</td>
+                        <td>Jane Doe</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- an intro video and image of the instructor -->
+
+            <h2>Intro Video</h2>
+            <video controls width="500">
+                <source src="intro.mp4" type="video/mp4" autoplay="on" muted>
+                Your browser does not support the video tag.
+            </video>
+
+            <h2>Instructor Photo</h2>
+            <img src="teacher.jpg" alt="Jane Doe, course instructor" width="450" height="auto">
+        </section>
+
+        <!-- Section 2: HTML5 Form -->
+        <section>
+            <!-- registering for the course  using submit-->
+            <h2>Register for the Course</h2>
+            <form action="/submit" method="post" width="600" align="left">
+                <p>Please fill out the form below to register for the course.</p>
+                <br>
+                <label for="fullname" >Full Name *</label><br>
+                <input 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    placeholder="Enter your full name" 
+                    required><br><br>
+
+                <label for="email">Email Address *</label><br>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="you@example.com" 
+                    required 
+                    autocomplete="email"><br><br>
+
+                <label for="password">Password *</label><br>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    minlength="8" 
+                    placeholder="At least 8 characters" 
+                    required><br><br>
+
+                <label for="phone">Phone Number</label><br>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    pattern="[0-9]{10}" 
+                    placeholder="e.g., 0712345678"><br><br>
+
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" id="dob" name="dob"><br><br>
+
+                <label for="course">Select Course</label><br>
+                <select id="course" name="course" required>
+                    <option value="">-- Choose --</option>
+                    <option value="html">HTML5 & Forms</option>
+                    <option value="css">CSS Styling</option>
+                    <option value="js">JavaScript Basics</option>
+                </select><br><br>
+
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+                    <label><input type="radio" name="referral" value="social" required> Social Media</label><br>
+                    <label><input type="radio" name="referral" value="friend"> Friend</label><br>
+                    <label><input type="radio" name="referral" value="search"> Search Engine</label>
+                </fieldset><br>
+
+                <label>
+                    <input type="checkbox" name="newsletter"> Subscribe to newsletter
+                </label><br><br>
+
+                <label for="graduation">Graduation Year</label><br>
+                <input 
+                    type="number" 
+                    id="graduation" 
+                    name="graduation" 
+                    min="2010" 
+                    max="2030" 
+                    value="2025"><br><br>
+
+                <button type="submit">Register Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Learning Platform. </p>
+    </footer>
+
+</body>
+</html>
